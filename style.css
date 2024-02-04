@@ -1,0 +1,50 @@
+@keyframes ballMove {
+  0% {
+    top: var(--topPos);
+    left: var(--leftPos);
+  }
+  100% {
+    top: var(--topPos + 200px);
+    left: var(--leftPos + 200px);
+  }
+}
+
+:root {
+  --leftPos: 250px;
+  --topPos: 250px;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 400px;
+  height: 400px;
+  border: 4px groove red;
+  margin: 25px;
+}
+
+#main > div {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+
+  border-radius: 72px;
+  border: 1px solid red;
+  /* animation: move 1s ease-in-out 0.1s infinite; */
+
+  
+}
+
+@keyframes move {
+  0% {
+    top: var(--topPos);
+    left: var(--leftPos);
+  }
+
+  100% {
+    top: calc(var(--topPos )+ 150px);
+    left: calc(var(--leftPos) + 50px);
+  }
+}
